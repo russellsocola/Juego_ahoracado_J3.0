@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahorcado by Russell</title>
+    <link rel="icon" href="./img/juego-del-ahorcado.png" title="juego del ahorcado iconos">
     <link href="./CSS/Style.css" rel="Stylesheet">
 </head>
 
@@ -12,18 +13,30 @@
     <main class="main_box">
         <div class="box">
             <h1 class="title h1">Juego del Ahorcado</h1>
+            
             <h2 class="title h2">Reglas basicas:</h2>
 
-            <p class="main_article">
-                La maquina propone en una palabra, y el jugador debe tratar de adivinarla según lo que sugiere por el numero de guion bajos o dentro de un cierto número de oportunidades.
-            </p>
-
+            <div class="box_center">
+                <img class="img" width="25px" height="25px">
+                <p class="main_article">
+                    La maquina propone en una palabra, y el jugador debe tratar de adivinarla según lo que sugiere por el numero de guion bajos o dentro de un cierto número de oportunidades.
+                </p>
+            </div>
+            
             <div class="box_btn">
-                <button type="submit" class="btn" data-form-btn> JUGAR </button>
-                <button type="submit" class="btn"> AGREGAR PALABRA </button>
+                <button type="submit" class="btn"><a href="./html/paper1.html"> JUGAR </a></button>
+                <button type="submit" class="btn" id="agregar"> AGREGAR PALABRA </button>
             </div>
         </div>
+        
+        <div class="box_newP" id="box_newP">
+            <p>*Ingrese la palabra en mayusculas y sin espacios</p>
+            <input class="newp_input" type="text" placeholder="Ingrese palabra Nueva" id="inputnew" maxlength="12" onkeyup="this.value=this.value.toUpperCase();" required>
+            <button class="btn" id="btn_add" >Añadir nueva Palabra</button>
+            <button type="submit" class="btn" onclick="ocultar(this)"> Cerrar </button>
+            <p id="verificado"></p>
+        </div>
     </main>
-    <script src="./JS/master.js"></script>
+    <script type="text/javascript" src="./JS/master.js"></script>
 </body>
 </html>

@@ -38,7 +38,22 @@ background-image: linear-gradient(
     font-size: 2.5rem;
 }
 
+.box_center{
+    display: flex;
+}
+
+.img{
+    display: block;
+    background: url("../img/juego-del-ahorcado.png") no-repeat;
+    background-size: cover;
+    border: none;
+    margin-right: 2rem;
+    height: 12rem;
+    width: 12rem;
+}
+
 .main_article{
+    display: flex;
     font-size: 1.75rem;
     font-family: 'Dosis', sans-serif;
     margin-bottom: 0.5rem;
@@ -56,11 +71,30 @@ background-image: linear-gradient(
         109.6deg,
         rgb(33, 230, 171) 11.2%,
         rgb(73, 136, 218) 100.2%
-      );
-    padding: 10px 15px;
+    );
+    padding: 1rem 15px;
     border: none;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    margin: 1rem;
+}
 
+.btn a{
+    background-image: linear-gradient(
+        109.6deg,
+        rgb(33, 230, 171) 11.2%,
+        rgb(73, 136, 218) 100.2%
+      );
+    color: #fff;
+    text-decoration: none;
+}
+
+#box_newP{
+    display: none;
+    text-align: center;
+}
+
+.newp_input{
+    height: 2rem;
 }
