@@ -1,20 +1,4 @@
-let diccionario = [
-    "PROGRAMADOR",
-    "DEVELOPER",
-    "JAVASCRIPT",
-    "AHORACADO",
-    "JAVA",
-    "HTML",
-    "CSS",
-    "PROGRAMACION",
-    "PERRO",
-    "GATO",
-    "LORO",
-    "CODING",
-    "SQL",
-];
-
-export let palabrasAzahar = diccionario[Math.floor(Math.random()*diccionario.length)];//Extraigo una palabra del diccionario.
+import {diccionario, palabrasAzahar} from './diccionario.js';
 
 document.querySelector("#btn_add").addEventListener("click", ()=>{
     let palabra = document.querySelector("#inputnew").value;
@@ -40,8 +24,6 @@ document.querySelector('#agregar').addEventListener('click', ()=>{
     document.querySelector("#box_newP").style.display="block";
 });
 
-
-
-function ocultar(){
+document.querySelector('#close').addEventListener('click', ()=>{
     document.querySelector("#box_newP").style.display="none";
-}
+});

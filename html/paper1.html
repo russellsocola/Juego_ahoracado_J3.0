@@ -12,12 +12,19 @@
     <main>
         <h1 class="titulo titulo_principal">Ahorcados</h1>
 
-        <p class="parrafo">Ingrese una letra, hasta hallar la palabra que busca </br>Cuenta con 5 intentos. </p>
-        <p id="parrafo_dic"></p>
-        <img class="img">
-        <p class="parrafo">Letras herradas:</p>
-        <p class="parrafo_letraserr"></p>
-    </main>
+        
+        <p class="parrafo">Ingrese una letra, hasta hallar la palabra propuesta. </br>Cuenta con 5 intentos. </p>
+        <p class="parrafo_dic" id="parrafo_dic"></p>
+
+        <div class="box_img">
+            <input type="text" class="input_box" id="input_box" maxlength="1" onkeyup="this.value=this.value.toUpperCase();" required>
+            <button class="btn" id="btn"> Probar </button>
+            <img class="img">
+        </div>
     
+        <p class="parrafo">Letras herradas:</p>
+        <p class="parrafo_letraserr" id="letraserr"></p>
+    </main>
+    <script type="module" src="../JS/contador.js"></script>
 </body>
 </html>
