@@ -1,0 +1,41 @@
+String.prototype.replaceAt=function(index, character) { 
+    return this.substr(0, index) + character + this.substr(index+character.length);
+ }
+
+ document.querySelector("#evaluar").addEventListener("click", ()=>{
+    var fallo= true;
+    var letra = document.querySelector("#letra").value;
+      
+    if(letra!== ""){
+
+        for (let i in palabra) {
+          if(letra == palabra[i]){
+              palabrasgion = palabrasgion.replaceAt(i*2, letra);
+              fallo= false;
+            }
+        }
+
+        if (fallo){
+            contadorfallos++;
+            letraserradas.push(letra);
+            document.querySelector("#errados").innerHTML=letraserradas;
+            document.querySelector("#letra").value = "";
+            document.querySelector("#img").style.
+            backgroundPosition = -(202*contadorfallos)+"px 0";
+            if(contadorfallos==4){
+                document.querySelector("#perdiste").style.display="flex";
+            }else {
+                if (palabrasgion.indexOf("_ ")  <0){
+                    document.querySelector("#ganador").style.display="flex";
+                    }
+                }
+        }
+        
+        document.querySelector("#muestra").innerHTML= palabrasgion;
+        document.querySelector("#letra").value = "";
+        document.querySelector("#letra").focus();
+        
+    }else{
+         alert("No ingrese espacios en blanco");
+        }
+});

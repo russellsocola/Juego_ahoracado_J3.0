@@ -1,4 +1,4 @@
-import {diccionario, palabrasAzahar} from './diccionario.js';
+import {diccionario} from './diccionario.js';
 
 document.querySelector("#btn_add").addEventListener("click", ()=>{
     let palabra = document.querySelector("#inputnew").value;
